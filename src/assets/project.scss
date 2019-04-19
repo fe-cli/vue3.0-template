@@ -1,0 +1,14 @@
+.container_right {
+  background: #fff;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 10px;
+  padding: 10px 20px;
+  .container_table {
+    border-top: 1px solid #f0f2f6;
+    border-radius: 3px;
+  }
+}
+.el-date-editor--datetimerange {
+  width: 350px !important;
+}
