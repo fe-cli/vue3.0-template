@@ -5,11 +5,9 @@
 </template>
 
 <script>
-import { loginUrl } from "@U/url"
+//import { loginUrl } from "@U/url"
 export default {
   name: "Main",
-  created() {
-    console.log(loginUrl)
-  }
+  created() {}
 }
 </script>

@@ -1,5 +1,5 @@
 /**
- * @Author: kevin
+ * @Author: yangkai93
  * Date: 2019/3/21
  * Time: 21:25
  *
@@ -7,20 +7,7 @@
 import { router } from "api/api-schema"
 const state = {
   headerIndex: "1",
-  headerArr: [
-    {
-      name: "资源管理",
-      params: "1"
-    },
-    {
-      name: "页面管理",
-      params: "1"
-    },
-    {
-      name: "权限管理",
-      params: "6"
-    }
-  ],
+  headerArr: [],
   asideList: [],
   asideActive: "0"
 }
@@ -32,8 +19,11 @@ const getters = {
 }
 
 const mutations = {
-  upAsideList(state, { list }) {
-    state.asideList = list
+  upAsideList(state, active) {
+    state.headerArr.length && (state.asideList = state.headerArr[active].children)
+  },
+  upHeaderArr(state, { list }) {
+    state.headerArr = list
   },
   upHeaderIndex(state, index) {
     state.headerIndex = index
@@ -44,14 +34,18 @@ const mutations = {
 }
 
 const actions = {
-  getAsidePath({ commit }, params = {}) {
-    router(params).then(res => {
-      res.data.map((item, i) => (item.index = "" + i))
-      commit("upAsideList", { list: res.data })
+  async getAsidePath({ commit, state }, params = {}) {
+    await router(params).then(res => {
+      console.log("vuex: router")
+      if (res.success == true) {
+        commit("upHeaderArr", { list: res.data })
+        state.asideList = res.data[0].children
+      }
     })
   },
   getHeaderIndex({ commit }, index) {
     commit("upHeaderIndex", index)
+    commit("upAsideList", index)
   }
 }
 

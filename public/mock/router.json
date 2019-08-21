@@ -1,74 +1,449 @@
 {
-  "code": 0,
-  "data": [
+  "data":[
     {
-      "name": "优惠券资源",
-      "pathName": "coupon",
-      "children": [
+      "bizData":"",
+      "children":[
         {
-          "name": "下发路由测试",
-          "pathName": "test"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"优惠券楼层池",
+              "menuCode":"vvip-res-coupon-pre-floor",
+              "menuId":70952,
+              "parentId":70951,
+              "path":"couponPool",
+              "showOrder":1
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"优惠券资源列表",
+              "menuCode":"vvip-res-coupon-pre-resList",
+              "menuId":70953,
+              "parentId":70951,
+              "path":"couponList",
+              "showOrder":2
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"优惠券规则",
+              "menuCode":"vvip-res-coupon-pre-rule",
+              "menuId":70954,
+              "parentId":70951,
+              "path":"couponRule",
+              "showOrder":3
+            }
+          ],
+          "icon":"",
+          "label":"优惠券资源",
+          "menuCode":"vvip-res-coupon-pre",
+          "menuId":70951,
+          "parentId":70950,
+          "path":"",
+          "showOrder":1
         },
         {
-          "name": "优惠券楼层池",
-          "pathName": "couponPool"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"京豆楼层池",
+              "menuCode":"vvip-res-jingbean-pre-floor",
+              "menuId":70956,
+              "parentId":70955,
+              "path":"beansPool",
+              "showOrder":1
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"京豆资源列表",
+              "menuCode":"vvip-res-jingbean-pre-resList",
+              "menuId":70957,
+              "parentId":70955,
+              "path":"beansList",
+              "showOrder":2
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"京豆规则",
+              "menuCode":"vvip-res-jingbean-pre-rule",
+              "menuId":70958,
+              "parentId":70955,
+              "path":"beansRule",
+              "showOrder":3
+            }
+          ],
+          "icon":"",
+          "label":"京豆资源",
+          "menuCode":"vvip-res-jingbean-pre",
+          "menuId":70955,
+          "parentId":70950,
+          "path":"",
+          "showOrder":2
         },
         {
-          "name": "优惠券资源列表",
-          "pathName": "couponList"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"福利池列表",
+              "menuCode":"vvip-res-welfare-pre-floor",
+              "menuId":70960,
+              "parentId":70959,
+              "path":"welfarePool",
+              "showOrder":1
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"福利资源列表",
+              "menuCode":"vvip-res-welfare-pre-resList",
+              "menuId":70961,
+              "parentId":70959,
+              "path":"welfareList",
+              "showOrder":2
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"兑换规则",
+              "menuCode":"vvip-res-welfare-pre-rule",
+              "menuId":70962,
+              "parentId":70959,
+              "path":"welfareRule",
+              "showOrder":3
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"类别管理",
+              "menuCode":"vvip-res-welfare-pre-categorymgr",
+              "menuId":71374,
+              "parentId":70959,
+              "path":"welfareResCategoryMgr",
+              "showOrder":4
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"活动标识",
+              "menuCode":"vvip-res-welfare-pre-activity",
+              "menuId":71375,
+              "parentId":70959,
+              "path":"welfareResActivity",
+              "showOrder":5
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"数据查询",
+              "menuCode":"vvip-res-welfare-pre-dataquery",
+              "menuId":71376,
+              "parentId":70959,
+              "path":"welfareResDataQuery",
+              "showOrder":6
+            }
+          ],
+          "icon":"",
+          "label":"福利资源",
+          "menuCode":"vvip-res-welfare-pre",
+          "menuId":70959,
+          "parentId":70950,
+          "path":"",
+          "showOrder":3
         },
         {
-          "name": "优惠券规则",
-          "pathName": "couponRule"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"特权资源列表",
+              "menuCode":"vvip-res-privilege-pre-resList",
+              "menuId":71090,
+              "parentId":71089,
+              "path":"powerList",
+              "showOrder":1
+            }
+          ],
+          "icon":"",
+          "label":"特权资源",
+          "menuCode":"vvip-res-privilege-pre",
+          "menuId":71089,
+          "parentId":70950,
+          "path":"",
+          "showOrder":4
+        },
+        {
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"资源规则",
+              "menuCode":"vvip-res-mgr-pre-rescfg-rescfg",
+              "menuId":71373,
+              "parentId":71372,
+              "path":"resRuleCfg",
+              "showOrder":1
+            }
+          ],
+          "icon":"",
+          "label":"资源规则配置",
+          "menuCode":"vvip-res-mgr-pre-rescfg",
+          "menuId":71372,
+          "parentId":70950,
+          "path":"",
+          "showOrder":5
         }
-      ]
+      ],
+      "icon":"",
+      "label":"资源管理",
+      "menuCode":"a_vvip-res-mgr-pre",
+      "menuId":70950,
+      "parentId":-1,
+      "path":"",
+      "showOrder":1000088566
     },
     {
-      "name": "京豆",
-      "pathName": "beans",
-      "children": [
+      "bizData":"",
+      "children":[
         {
-          "name": "京豆楼层池",
-          "pathName": "beansPool"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"会员首页配置",
+              "menuCode":"vvip-page-index-pre-club",
+              "menuId":70967,
+              "parentId":70964,
+              "path":"indexpage",
+              "showOrder":1
+            }
+          ],
+          "icon":"",
+          "label":"首页配置",
+          "menuCode":"vvip-page-index-pre",
+          "menuId":70964,
+          "parentId":70963,
+          "path":"",
+          "showOrder":1
         },
         {
-          "name": "京豆资源列表",
-          "pathName": "beansList"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"摇一摇配置",
+              "menuCode":"vvip-page-gallery-pre-shaking",
+              "menuId":70968,
+              "parentId":70965,
+              "path":"shakePage",
+              "showOrder":1
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"专享券配置",
+              "menuCode":"vvip-page-gallery-pre-exclusive",
+              "menuId":70969,
+              "parentId":70965,
+              "path":"exclusive",
+              "showOrder":2
+            }
+          ],
+          "icon":"",
+          "label":"百宝箱二级页面配置",
+          "menuCode":"vvip-page-gallery-pre",
+          "menuId":70965,
+          "parentId":70963,
+          "path":"",
+          "showOrder":1000088568
         },
         {
-          "name": "京豆规则",
-          "pathName": "beansRule"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"对话框配置",
+              "menuCode":"vvip-page-upscore-pre-dialog",
+              "menuId":70970,
+              "parentId":70966,
+              "path":"jxzDhk",
+              "showOrder":1
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"任务资源",
+              "menuCode":"vvip-page-upscore-pre-task",
+              "menuId":70971,
+              "parentId":70966,
+              "path":"jxzRenwu",
+              "showOrder":2
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"成长计划配置",
+              "menuCode":"vvip-page-upscore-pre-growth",
+              "menuId":70972,
+              "parentId":70966,
+              "path":"jxzChengzhang",
+              "showOrder":3
+            }
+          ],
+          "icon":"",
+          "label":"提升京享值配置",
+          "menuCode":"vvip-page-upscore-pre",
+          "menuId":70966,
+          "parentId":70963,
+          "path":"",
+          "showOrder":1000088569
         }
-      ]
+      ],
+      "icon":"",
+      "label":"页面管理",
+      "menuCode":"b_vvip-page-mgr-pre",
+      "menuId":70963,
+      "parentId":-1,
+      "path":"",
+      "showOrder":1000088567
     },
     {
-      "name": "福利资源",
-      "pathName": "welfare",
-      "children": [
+      "bizData":"",
+      "children":[
         {
-          "name": "福利楼层池",
-          "pathName": "welfarePool"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"icon配置",
+              "menuCode":"vvip-mgr-web-pre-welfare-cfgmgr-icon",
+              "menuId":71368,
+              "parentId":71367,
+              "path":"welfareIcon",
+              "showOrder":1
+            },
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"广告配置",
+              "menuCode":"vvip-mgr-web-pre-welfare-cfgmgr-ad",
+              "menuId":71369,
+              "parentId":71367,
+              "path":"welfareAd",
+              "showOrder":2
+            }
+          ],
+          "icon":"",
+          "label":"配置管理",
+          "menuCode":"vvip-mgr-web-pre-welfare-cfgmgr",
+          "menuId":71367,
+          "parentId":71366,
+          "path":"",
+          "showOrder":1
         },
         {
-          "name": "福利资源列表",
-          "pathName": "welfareList"
-        },
-        {
-          "name": "福利规则",
-          "pathName": "welfareRule"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"抽奖活动",
+              "menuCode":"vvip-mgr-web-pre-welfare-activitymgr-lottery",
+              "menuId":71371,
+              "parentId":71370,
+              "path":"welfareLottery",
+              "showOrder":1
+            }
+          ],
+          "icon":"",
+          "label":"活动管理",
+          "menuCode":"vvip-mgr-web-pre-welfare-activitymgr",
+          "menuId":71370,
+          "parentId":71366,
+          "path":"",
+          "showOrder":2
         }
-      ]
+      ],
+      "icon":"",
+      "label":"福利积分管理",
+      "menuCode":"c_vvip-mgr-web-pre-welfare",
+      "menuId":71366,
+      "parentId":-1,
+      "path":"",
+      "showOrder":2000074427
     },
     {
-      "name": "百宝箱二级页面配置",
-      "pathName": "pageManag",
-      "children": [
+      "bizData":"",
+      "children":[
         {
-          "name": "摇一摇配置",
-          "pathName": "shakePage"
+          "bizData":"",
+          "children":[
+            {
+              "bizData":"",
+              "children":[],
+              "icon":"",
+              "label":"配置信息",
+              "menuCode":"vvip-sys-config-configinfo-pre",
+              "menuId":71219,
+              "parentId":71218,
+              "path":"sysConfig",
+              "showOrder":1
+            }
+          ],
+          "icon":"",
+          "label":"系统配置",
+          "menuCode":"vvip-sys-config-pre",
+          "menuId":71218,
+          "parentId":71217,
+          "path":"",
+          "showOrder":1
         }
-      ]
+      ],
+      "icon":"",
+      "label":"系统管理",
+      "menuCode":"d_vvip-sys-mgr-pre",
+      "menuId":71217,
+      "parentId":-1,
+      "path":"",
+      "showOrder":1000088570
     }
   ],
-  "success": true
+  "success":true
 }

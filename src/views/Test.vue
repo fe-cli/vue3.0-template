@@ -3,7 +3,6 @@
     <ImgUpload v-model="imgUrl" ref="testUpload"></ImgUpload>
     <el-button @click="valivn">dsafs</el-button>
     <Editor ref="editor" v-model="html"></Editor>
-    <el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
     <!--<FormCol :coldata="colData" :edit="isEdit" :max="3"></FormCol>-->
     <RuleModel ref="rules" v-for="(item, index) in triggerData.ruleVos" :key="index" :tdata="item"></RuleModel>
 
@@ -17,7 +16,7 @@
 </template>
 <script>
 import RuleModel from "@/common/RuleModel"
-import { rule } from "api/api-schema"
+// import { rule } from "api/api-schema"
 import ImgUpload from "@/common/ImgUpload"
 import { mapActions, mapGetters } from "vuex"
 import Editor from "@/common/Editor"
@@ -47,9 +46,489 @@ export default {
   },
   created() {
     const _this = this
-    rule().then(res => {
-      _this.triggerData = res.data
-    })
+    _this.triggerData = {
+      ruleGroupId: 25,
+      ruleVos: [
+        {
+          ruleId: 5,
+          templateType: "SEND",
+          virtualRuleVos: [
+            {
+              attributeVos: [
+                {
+                  attributeType: "LIST",
+                  candidateValues: [
+                    {
+                      id: 1,
+                      name: "-10"
+                    },
+                    {
+                      id: 2,
+                      name: "-9"
+                    },
+                    {
+                      id: 3,
+                      name: "-8"
+                    }
+                  ],
+                  code: "riskLevel",
+                  id: 6,
+                  name: "select",
+                  required: true,
+                  value: ""
+                },
+                {
+                  attributeType: "LIST",
+                  candidateValues: [
+                    {
+                      id: 1,
+                      name: "-10"
+                    },
+                    {
+                      id: 2,
+                      name: "-9"
+                    },
+                    {
+                      id: 3,
+                      name: "-8"
+                    }
+                  ],
+                  code: "riskLevel",
+                  id: 6,
+                  name: "select",
+                  required: true,
+                  value: ""
+                },
+                {
+                  attributeType: "STRING",
+                  code: "inputVal",
+                  id: 2,
+                  name: "字符串",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "LIST",
+                  candidateValues: [
+                    {
+                      id: 1,
+                      name: "-10"
+                    },
+                    {
+                      id: 2,
+                      name: "-9"
+                    },
+                    {
+                      id: 3,
+                      name: "-8"
+                    }
+                  ],
+                  code: "riskLevel",
+                  id: 6,
+                  name: "select",
+                  required: true,
+                  value: ""
+                },
+                {
+                  attributeType: "STRING",
+                  code: "inputVal",
+                  id: 2,
+                  name: "字符串",
+                  required: true,
+                  value: ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          ruleId: 5,
+          templateType: "COMMON",
+          virtualRuleVos: [
+            {
+              attributeVos: [
+                {
+                  attributeType: "LIST",
+                  candidateValues: [
+                    {
+                      id: 1,
+                      name: "-10"
+                    },
+                    {
+                      id: 2,
+                      name: "-9"
+                    },
+                    {
+                      id: 3,
+                      name: "-8"
+                    }
+                  ],
+                  code: "riskLevel",
+                  id: 6,
+                  name: "select",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "STRING",
+                  code: "inputVal",
+                  id: 2,
+                  name: "字符串",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "INTEGER",
+                  code: "number",
+                  id: 3,
+                  name: "整数",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "INTEGER",
+                  code: "number",
+                  id: 3,
+                  name: "整数",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "FLOAT",
+                  code: "float",
+                  id: 9,
+                  name: "浮点",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "ENUMS",
+                  candidateValues: [
+                    {
+                      value: 0,
+                      name: "枚举1"
+                    },
+                    {
+                      value: 1,
+                      name: "枚举2"
+                    },
+                    {
+                      value: 2,
+                      name: "枚举3"
+                    }
+                  ],
+                  code: "selectEnums",
+                  id: 0,
+                  name: "枚举",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "DATE",
+                  code: "date",
+                  id: 11,
+                  name: "日期",
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "DYNAMIC_LIST",
+                  code: "dynamic_list",
+                  id: 12,
+                  name: "动态列表",
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "RADIO",
+                  candidateValues: [
+                    {
+                      value: 0,
+                      name: "单选1"
+                    },
+                    {
+                      value: 1,
+                      name: "单选2"
+                    },
+                    {
+                      value: 2,
+                      name: "单选3"
+                    }
+                  ],
+                  code: "radio",
+                  id: 0,
+                  name: "单选",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "DATE_RANGE",
+                  code: "dateRange",
+                  id: 13,
+                  name: "日期区间",
+                  value: []
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "CHECK_BOX",
+                  candidateValues: [
+                    {
+                      id: 0,
+                      name: "多选1"
+                    },
+                    {
+                      id: 1,
+                      name: "多选2"
+                    },
+                    {
+                      id: 2,
+                      name: "多选3"
+                    }
+                  ],
+                  code: "checkbox",
+                  id: 0,
+                  name: "多选",
+                  required: true,
+                  value: []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          ruleId: 5,
+          templateType: "COMMON",
+          virtualRuleVos: [
+            {
+              attributeVos: [
+                {
+                  attributeType: "LIST",
+                  candidateValues: [
+                    {
+                      id: 1,
+                      name: "-10"
+                    },
+                    {
+                      id: 2,
+                      name: "-9"
+                    },
+                    {
+                      id: 3,
+                      name: "-8"
+                    }
+                  ],
+                  code: "riskLevel",
+                  id: 6,
+                  name: "select",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "STRING",
+                  code: "inputVal",
+                  id: 2,
+                  name: "字符串",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "INTEGER",
+                  code: "number",
+                  id: 3,
+                  name: "整数",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "INTEGER",
+                  code: "number",
+                  id: 3,
+                  name: "整数",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "FLOAT",
+                  code: "float",
+                  id: 9,
+                  name: "浮点",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "ENUMS",
+                  candidateValues: [
+                    {
+                      value: 0,
+                      name: "枚举1"
+                    },
+                    {
+                      value: 1,
+                      name: "枚举2"
+                    },
+                    {
+                      value: 2,
+                      name: "枚举3"
+                    }
+                  ],
+                  code: "selectEnums",
+                  id: 0,
+                  name: "枚举",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "DATE",
+                  code: "date",
+                  id: 11,
+                  name: "日期",
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "DYNAMIC_LIST",
+                  code: "dynamic_list",
+                  id: 12,
+                  name: "动态列表",
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "RADIO",
+                  candidateValues: [
+                    {
+                      value: 0,
+                      name: "单选1"
+                    },
+                    {
+                      value: 1,
+                      name: "单选2"
+                    },
+                    {
+                      value: 2,
+                      name: "单选3"
+                    }
+                  ],
+                  code: "radio",
+                  id: 0,
+                  name: "单选",
+                  required: true,
+                  value: ""
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "DATE_RANGE",
+                  code: "dateRange",
+                  id: 13,
+                  name: "日期区间",
+                  value: []
+                }
+              ]
+            },
+            {
+              attributeVos: [
+                {
+                  attributeType: "CHECK_BOX",
+                  candidateValues: [
+                    {
+                      id: 0,
+                      name: "多选1"
+                    },
+                    {
+                      id: 1,
+                      name: "多选2"
+                    },
+                    {
+                      id: 2,
+                      name: "多选3"
+                    }
+                  ],
+                  code: "checkbox",
+                  id: 0,
+                  name: "多选",
+                  required: true,
+                  value: []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   },
   mounted() {},
   methods: {

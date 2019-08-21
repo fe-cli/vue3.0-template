@@ -4,13 +4,13 @@
       <el-header>
         <Header></Header>
       </el-header>
-      <el-row :gutter="24" class>
-        <el-col :span="4">
+      <el-row :gutter="20" class="zvip-cont">
+        <el-col :span="4" class="zvip-left">
           <Aside />
         </el-col>
-        <el-col :span="20">
+        <el-col :span="20" class="zvip-right">
           <Breadcrumb></Breadcrumb>
-          <router-view></router-view>
+          <router-view v-if="isReload"></router-view>
         </el-col>
       </el-row>
     </el-container>
@@ -22,10 +22,30 @@ import Header from "@/layout/Header"
 import Breadcrumb from "@/common/Breadcrumb"
 export default {
   name: "App",
+  mixins: ["vvip_business_id"],
   components: {
     Aside,
     Header,
     Breadcrumb
+  },
+  provide() {
+    return {
+      reload: this.reload
+    }
+  },
+  data() {
+    return {
+      isReload: true
+    }
+  },
+  methods: {
+    reload() {
+      this.isReload = false
+      this.$nextTick(function() {
+        this.isReload = true
+        this.vvip_business_id = window.localStorage.getItem("vvip_business_id")
+      })
+    }
   }
 }
 </script>
@@ -37,6 +57,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   overflow: hidden;
+  min-width: 1366px;
   .el-header {
     padding: 0;
     background: #001830;

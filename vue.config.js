@@ -5,7 +5,7 @@ var config = require("./config")
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
-console.log("=======================233")
+console.log("=======================")
 console.log(process.env.NODE_ENV)
 console.log("=======================")
 module.exports = {

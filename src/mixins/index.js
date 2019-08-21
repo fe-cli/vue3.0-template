@@ -1,5 +1,5 @@
 /**
- * @Author: kevin
+ * @Author: yangkai93
  * Date: 2019/3/29
  * Time: 11:33
  *
@@ -20,6 +20,7 @@ export default {
         CHECK_BOX: "checkbox"
       },
       systemId: 1, // 会员接口系统表示
+      vvip_business_id: window.localStorage.getItem("vvip_business_id"),
       typeArr: [
         // 福利规则类型
         {

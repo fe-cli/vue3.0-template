@@ -1,6 +1,13 @@
 <template>
   <div>
-    <el-table :data="data" style="width: 100%">
+    <el-table
+      :data="data"
+      style="width: 100%"
+      ref="multipleTable"
+      @selection-change="selectEvent"
+      :row-key="getRowKeys"
+    >
+      <el-table-column v-if="checkList" type="selection" :reserve-selection="true"></el-table-column>
       <el-table-column
         v-for="(item, i) in label"
         :key="i"
@@ -18,11 +25,10 @@
       </el-table-column>
       <slot></slot>
     </el-table>
-    <div class="zpage-box">
+    <div class="zpage-box" v-if="total > size">
       <el-pagination
-        v-if="total > size"
         background
-        layout="prev, pager, next"
+        :layout="showTotal ? 'total, prev, pager, next' : 'prev, pager, next'"
         :current-page.sync="currentPage"
         :total="total"
         :page-size="size"
@@ -38,19 +44,40 @@ export default {
   data() {
     return {
       currentPage: this.value || 1,
-      size: this.pageSize || 10
+      size: this.pageSize || 10,
+      selected: this.checkList || []
     }
   },
-  props: ["data", "label", "total", "pageSize", "value"],
+  props: ["data", "label", "total", "pageSize", "value", "showTotal", "checkList"],
   watch: {
     value() {
       this.currentPage = this.value
     }
   },
+  mounted() {
+    this.checkList && this.checkList.length && this.toggleSelection(this.checkList)
+  },
   methods: {
     handlePage(val) {
       this.$emit("input", val)
       this.$emit("currPage", val)
+    },
+    getRowKeys(row) {
+      return row.id
+    },
+    selectEvent(select) {
+      this.selected = [...select]
+      // 选中回调后门 暂留
+      this.$emit("select", select)
+    },
+    toggleSelection(rows) {
+      if (rows) {
+        rows.forEach(row => {
+          this.$refs.multipleTable.toggleRowSelection(row)
+        })
+      } else {
+        this.$refs.multipleTable.clearSelection()
+      }
     }
   }
 }
